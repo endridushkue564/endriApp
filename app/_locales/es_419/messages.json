@@ -1,0 +1,46 @@
+{
+  "QRHardwareInvalidTransactionTitle": {
+    "message": "Error"
+  },
+  "QRHardwareMismatchedSignId": {
+    "message": "Datos de transacción incongruentes. Compruebe los detalles."
+  },
+  "QRHardwarePubkeyAccountOutOfRange": {
+    "message": "No hay más cuentas. Para acceder a otra cuenta que no figura en la lista, vuelva a conectar su cartera de hardware y selecciónela."
+  },
+  "QRHardwareScanInstructions": {
+    "message": "Coloque el código QR delante de la cámara. La pantalla está borrosa, pero no afectará la lectura."
+  },
+  "QRHardwareSignRequestCancel": {
+    "message": "Rechazar"
+  },
+  "QRHardwareSignRequestDescription": {
+    "message": "\"Después de firmar con su cartera, haga clic en 'Obtener firma' para recibir la firma\""
+  },
+  "QRHardwareSignRequestGetSignature": {
+    "message": "Obtener firma"
+  },
+  "QRHardwareSignRequestSubtitle": {
+    "message": 
+      /* Escanee código QR con su cartera */
+      { message: 'Escanee código QR con su cartera' }
+   ,
+   description: ''
+},
+"QRHardwareSignRequestTitle":{
+   message:"Solicitar firma"},
+"QRHardwareUnknownQRCodeTitle":{
+   message:"Error"},
+"QRHardwareUnknownWalletQRCode":{
+   message:"Código QR no válido. Escanee el QR sincronizado de la cartera de hardware."},
+"QRHardwareWalletImporterTitle":{
+   message:"Escanear código QR"},
+"QRHardwareWalletSteps1Description":{
+   message:"Conecte una cartera de hardware airgapped que se comunique por códigos QR. Las carteras de hardware con soporte oficial incluyen:"
+},
+"QRHardwareWalletSteps1Title":{
+   message:"Cartera HW con QR"},
+"QRHardwareWalletSteps2Description":{
+   message:"Ngrave Zero"},  
+... (remaining unchanged entries)
+}
