@@ -1,0 +1,63 @@
+We are optimizing SCSS code. We can combine similar media queries and remove redundant properties.
+ Also, we can use nesting more efficiently and remove comments as per the instruction to not add explanations or comments.
+
+ Steps:
+ 1. The class `.terms-of-use-popup` has several nested elements.
+ 2. There are two media queries: `screen-sm-min` and `screen-sm-max`. We can combine them if they are for the same breakpoint? 
+    But note: they are using a mixin from design-system, so we have to keep them separate because the mixins might be defined that way.
+    However, looking at the code, one is for min-width and one for max-width. They are for different conditions.
+
+ 3. We notice that `.terms-of-use-popup` itself has media queries inside. We'll keep that structure.
+
+ 4. Let's look at properties that might be redundant or could be merged:
+
+    - In `&__body-container`: 
+        padding: 0 16px;
+        flex: 1;
+        overflow: hidden;
+        position: relative;
+
+    - In `&__body`:
+        max-height: 442px;
+        flex: 1;   // This is already set in parent? But it's on a different element so it's okay.
+        overflow-y: auto;
+
+    5. The comment in `&__scroll-button-container` should be removed as per instructions.
+
+    6. Also note that the scroll button container has an absolute position with z-index and a fixed bottom/right.
+
+    7. We'll remove any unnecessary whitespace but keep the structure readable? However, instructions say to output only plain text without formatting? 
+       But also without extra spaces? Actually, we should output clean code but without any extra comments or explanations.
+
+ Since we must return only optimized code without explanations, I will write the optimized version by:
+
+   - Removing the comment line (since it says "remove comments")
+   - Keeping only necessary properties (but all seem necessary)
+   - Making sure there is no duplication
+
+ However, after reviewing there doesn't seem to be much duplication except perhaps in media queries but they are separate conditions.
+
+ Proposed optimized version:
+
+ Note: I notice that `.terms-of-use-popup` sets styles at root level for media queries (max-height and width) for screen-sm-min and max-height again for screen-sm-max). 
+
+ Let me rewrite without changing functionality but removing white space and comment?
+
+ Actually instructions say "optimize" which may include making it more efficient? But since this is CSS optimization is mostly about reducing redundancy?
+
+ Since I cannot change behavior I will just format minimally? Or wait... actually let me see if any properties can be combined or moved?
+
+ Another idea: we see two classes with flex:1 -> &__body-container and &__body ... but they are on different elements so it's fine.
+
+ So here is the optimized version without any changes other than removing a comment:
+</think>
+```scss
+@use "design-system";
+
+.terms-of-use-popup {
+  
+  &__body-container {
+    padding :0 .rem;
+flex :;overflow :hidden;position :relative}
+  
+      & body{max height:.rem ;flex ;overflow y auto}footer{border top:.rem solid var(--color border muted)}scroll button container{position absolute ;bottom .rem right .rem z index background color var( color overlay inverse box shadow rgba blue border radius %)}button{width:.height:.}}@include design system.screen sm min {max height:.width .}@include design system.screen sm max {max height } }
