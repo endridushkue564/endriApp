@@ -1,0 +1,8 @@
+exports[`AvatarBase should render correctly 1`] = `
+<div>
+  <div
+    class="mm-box mm-text mm-avatar-base mm-avatar-base--size-md mm-text--body-sm uppercase flex justify-center items-center text-default bg-alternative rounded-full"
+    data-testid="avatar-base"
+  />
+</div>
+`;
