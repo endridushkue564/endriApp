@@ -1,0 +1,51 @@
+@use "design-system";
+
+.transaction-list {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  &__completed-transactions,
+  &__transactions {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  &__header {
+    @include design-system.H6;
+
+    flex-shrink: 0;
+    color: var(--color-text-muted);
+    border-bottom: thin solid var(--color-border-muted);
+    padding-block-end: calc(8px + (var(--scale-factor) * .5));
+    
+    @include design-system.screen-sm-max { padding-inline-start: calc(16px + (var(--scale-factor) * -.5)); }
+    
+}
+
+&__empty,
+&__view-on-block-explorer {
+   display : grid; 
+   place-items:center; 
+ } 
+
+&__empty{
+     gap:.7rem ; 
+     padding-top :calc(24 px *(var (-- scale - factor )+ .3)) ;
+     
+ }
+
+&__empty-text ,  
+& __ view - on - block - explorer >*{text-align:center ;}  
+
+& __ empty - text{
+       order :2 ;
+       font-size :calc(.9em +(var (-- scale -factor )* .3)) ;
+
+}& __ view - more{
+          max-width :min(calc(200 px *(var (-- scale- factor ))),95vw );
+          margin:block-center auto ;
+         }   
+
+}
